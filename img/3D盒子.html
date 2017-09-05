@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: black;
+        }
+        .stage,.stage>img{
+            width: 400px;
+            height: 400px;
+            position: absolute;
+        }
+        .stage{
+            left: calc(50vw - 200px);
+            top: calc(50vh - 200px);
+            transform: rotateX(-10deg)rotateY(10deg);
+            transform-style: preserve-3d;
+            transition: 4S;
+            animation: ani 38s infinite ease;
+
+        }
+        @-webkit-keyframes ani{
+            from{
+                transform: rotateX(-10deg) rotateY(10deg);
+            }
+            to{
+                transform:rotateX(350deg) rotateY(3610deg);
+            }
+        }
+        .stage:hover{
+            transform: rotateX(350deg)
+            rotateY(370deg);
+        }
+        img{
+            opacity: 0.5;
+            box-shadow: 0 0 30px yellowgreen;
+        }
+        .im1{
+            transform: translateZ(200px);
+        }
+        .im2{
+            transform: rotateY(180deg)
+            translateZ(200px);
+        }
+        .im3{
+            transform: rotateY(90deg)
+            translateZ(200px);
+
+        }
+        .im4{
+            transform: rotateY(-90deg)
+            translateZ(200px);
+
+        }
+        .im5{
+            transform: rotateX(90deg)
+            translateZ(200px);
+
+        }
+        .im6{
+            transform: rotateX(-90deg)
+            translateZ(200px);
+
+        }
+
+    </style>
+</head>
+<body>
+<div class="stage">
+    <img src="1.jpg" alt="" class="im1">
+    <img src="2.jpg" alt="" class="im2">
+    <img src="3.jpg" alt="" class="im3">
+    <img src="4.jpg" alt="" class="im4">
+    <img src="5.jpg" alt="" class="im5">
+    <img src="6.jpg" alt="" class="im6">
+</div>
+<audio src="mf.mp3" autoplay="autoplay" loop="loop" controls="controls"></audio>
+
+
+</body>
+</html>
